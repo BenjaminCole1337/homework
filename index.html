@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Homework Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Math Homework Portal</h1>
+            <p class="subtitle">Select your class to view and complete homework assignments</p>
+        </header>
+
+        <main id="main-content">
+            <section id="class-selection" class="card">
+                <h2>Select Your Class</h2>
+                <div class="class-list">
+                    <button class="class-btn" onclick="loadHomework('algebra1')">
+                        <span class="class-icon">🔢</span>
+                        <span class="class-name">Algebra I</span>
+                    </button>
+                    <button class="class-btn" onclick="loadHomework('geometry')">
+                        <span class="class-icon">📐</span>
+                        <span class="class-name">Geometry</span>
+                    </button>
+                    <button class="class-btn" onclick="loadHomework('algebra2')">
+                        <span class="class-icon">📊</span>
+                        <span class="class-name">Algebra II</span>
+                    </button>
+                    <button class="class-btn" onclick="loadHomework('precalculus')">
+                        <span class="class-icon">📈</span>
+                        <span class="class-name">Pre-Calculus</span>
+                    </button>
+                    <button class="class-btn" onclick="loadHomework('calculus')">
+                        <span class="class-icon">∫</span>
+                        <span class="class-name">Calculus</span>
+                    </button>
+                    <button class="class-btn" onclick="loadHomework('statistics')">
+                        <span class="class-icon">📉</span>
+                        <span class="class-name">Statistics</span>
+                    </button>
+                </div>
+            </section>
+
+            <section id="homework-section" class="card hidden">
+                <div class="section-header">
+                    <h2 id="homework-title"></h2>
+                    <button class="back-btn" onclick="backToClassSelection()">← Back to Classes</button>
+                </div>
+                <div id="questions-container"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Math Homework Portal &copy; 2026 | LaTeX rendering powered by MathJax</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
